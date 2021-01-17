@@ -14,8 +14,7 @@ The following key-bindings work (case-sensitive).
 |---|---|
 |;|Remaps ; to : for easier command input|
 |\<space>ev|Opens .vimrc for editing in a split window|
-|\<space>sv|Loads .vimrc after saving, so you don't have to close and open vim
-to see changes|
+|\<space>sv|Loads .vimrc after saving, so you don't have to close and open vim to see changes|
 |H|Go to first character in a line|
 |L|Go to last character in a line|
 |zz|Save and quit|
