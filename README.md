@@ -9,7 +9,7 @@ the most important commands and keybindings to me and possibly you too.
 
 ### Leader Key
 
-_Note_ My leader key is set to \<space>. Therefore if you change the leader
+**Note** My leader key is set to \<space>. Therefore if you change the leader
 key, the bindings below will follow suit.
 
 ## KeyBindings
