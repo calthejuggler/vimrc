@@ -4,8 +4,8 @@ Feel free to use this as your starting .vimrc!
 
 ## Why Though?
 
-It's not super full like most of the .vimrcs on GitHub, but includes some of
-the most important commands and keybindings.
+It's not super full like most of the .vimrcs on GitHub, and includes some of
+the most important commands and keybindings to me and possibly you too.
 
 ## KeyBindings
 
