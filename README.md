@@ -7,6 +7,11 @@ Feel free to use this as your starting .vimrc!
 It's not super full like most of the .vimrcs on GitHub, and includes some of
 the most important commands and keybindings to me and possibly you too.
 
+### Leader Key
+
+_Note_ My leader key is set to \<space>. Therefore if you change the leader
+key, the bindings below will follow suit.
+
 ## KeyBindings
 
 The following key-bindings work (case-sensitive).
