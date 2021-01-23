@@ -79,6 +79,10 @@ vnoremap <leader>< <esc>`>a><esc>`<i<<esc>`>el
 " Backticks
 vnoremap <leader>` <esc>`>a`<esc>`<i`<esc>`>el
 
+" Comment line(s) in JS/TS
+autocmd FileType javascript nnoremap <leader>/ 0i//<tab><esc>w
+autocmd FileType typescript nnoremap <leader>/ 0i//<tab><esc>w
+
 " Move current line
 nnoremap <C-j> ddp
 nnoremap <C-k> ddk<S-p>
@@ -121,3 +125,4 @@ nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <down> <nop>
 nnoremap <up> <nop>
+
