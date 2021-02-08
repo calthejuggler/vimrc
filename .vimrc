@@ -1,9 +1,13 @@
 set background=dark
+set guifont=FiraCode\ Nerd\ Font:h10
+
+set encoding=UTF-8
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
+set clipboard=unnamed
 
 set exrc
 set relativenumber
@@ -38,12 +42,14 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 colorscheme gruvbox
@@ -64,6 +70,9 @@ nnoremap L $
 vnoremap L $
 " Save and quit
 nnoremap zz :wq<cr>
+" Change tabs
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
 
 " Surround selection
 " Single-quotes
@@ -79,9 +88,10 @@ vnoremap <leader>< <esc>`>a><esc>`<i<<esc>`>el
 " Backticks
 vnoremap <leader>` <esc>`>a`<esc>`<i`<esc>`>el
 
-" Comment line(s) in JS/TS
+" Comment line(s) in JS/TS/GO
 autocmd FileType javascript nnoremap <leader>/ 0i//<tab><esc>w
 autocmd FileType typescript nnoremap <leader>/ 0i//<tab><esc>w
+autocmd FileType go nnoremap <leader>/ 0i//<tab><esc>w
 
 " Move current line
 nnoremap <C-j> ddp
@@ -108,7 +118,9 @@ augroup REMOVE_WHITESPACE_ON_SAVE
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
-nnoremap <leader>n :NERDTreeToggle<CR>
+" FZF call
+nnoremap <leader>n :FZF<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nnoremap <leader>f :CocCommand prettier.formatFile<CR>
@@ -126,3 +138,6 @@ nnoremap <right> <nop>
 nnoremap <down> <nop>
 nnoremap <up> <nop>
 
+" Remove PgUp and Dn
+nnoremap <PageUp> <nop>
+nnoremap <PageDown> <nop>
